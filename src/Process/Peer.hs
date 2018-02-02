@@ -816,4 +816,4 @@ testAllowedFast = do
   where ip32 :: [Int] -> Word32
         ip32 bytes = fromIntegral $ sum [b `shiftL` s | (b, s) <- zip bytes [24,16,8,0]]
         tHash :: B.ByteString
-        tHash = B.pack $ take 20 (repeat 0xaa)
+        tHash = B.pack $ Prelude.take 20 (repeat 0xaa)
